@@ -3,110 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <title>Document</title>
 </head>
 <body>
-    <!--ヘッダー-->
-    <div class="header">
-    <div class="amazon-logo">
-    <img src="images/Amazon_logo.svg" alt="Amazon Logo"> 
-    <p>.co.jp</p>
-    </div>
+    <header>
 
-    <div class="header-address">
-    <span class="nav-line-1">お届け先: 荏原 142-0061</span>
-    <i class="fa-light fa-location-dot header-address-icon"></i>
-    <span class="nav-line-2">場所を更新する</span>
-    </div>
+    <!-- ① Amazonロゴ -->
+        <a href="index.html" class="amazon-logo header-hover">
+            <img src="images/Amazon_logo.svg" alt="Amazon Logo">
+            <p>.co.jp</p>
+        </a>
+    
+    <!-- ② お届け先 -->
+        <a href="404.html" class="header-address header-hover">
+            <span class="nav-line-1">お届け先: 川口 332-****</span>
+            <div class="address-bottom">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="nav-line-2">場所を更新する</span>
+            </div>
+        </a>
 
-    <!--検索フォーム-->
-    <form class="search-form" action="404.html">
+    <!--③ 検索フォーム-->
+        <form class="search-form" action="index.html">
+            <div class="category-box">
+                <span class="category-label">すべて</span>
+                <i class="fa-solid fa-caret-down category-icon"></i>
 
-    <div class="category-select">
-    <div class="category-label">すべて</div>
+                <select class="category-search">
+                    <option value="hurusato">すべてのカテゴリー</option>
+                    <option value="hurusato">Amazon ふるさと納税</option>
+                    <option value="sale">プライム感謝セール</option>
+                    <option value="audio">Audibleオーディオブック</option>
+                    <option value="flesh">Amazon フレッシュ</option>
+                    <option value="life">ライフ</option>
+                    <option value="seijyo">成城石井</option>
+                    <option value="device">Amazon デバイス</option>
+                    <option value="kindle">Kindleストア</option>
+                    <option value="video">Prime Video</option>
+                    <option value="alexa">Alexaスキル</option>
+                    <option value="teikibin">Amazon定期おトク便</option>
+                    <option value="digitalmusic">デジタルミュージック</option>
+                    <option value="appgame">アプリ&ゲーム</option>
+                    <option value="book">本</option>
+                    <option value="books">洋書</option>
+                    <option value="music">音楽</option>
+                    <option value="classic">クラシック</option>
+                    <option value="dvd">DVD</option>
+                    <option value="pc">コンピューター&テレビゲーム</option>
+                    <option value="PCsoft">PCソフト</option>
+                    <option value="PC1">パソコン·周辺機器</option>
+                    <option value=""erekuto>エレクトロニクス&カメラ</option>
+                    <option value="bungu">文房具·オフィス用品</option>
+                    <option value="kitchen">キッチン&家庭用品</option>
+                    <option value="pet">ペット用品</option>
+                    <option value="health">ヘルスケア&パーソナルケア</option>
+                    <option value="beauty">ビューティー</option>
+                    <option value="food">食品·飲料·お酒</option>
+                    <option value="baby">ベビー&マタニティ</option>
+                    <option value="fashion">ファッション</option>
+                    <option value="woman">女性服、靴、ジュエリー</option>
+                    <option value="man">男性用服、靴、ジュエリー</option>
+                    <option value="baby2">ベビー服、靴、ジュエリー</option>
+                    <option value="omocha">玩具</option>
+                    <option value="hobby">ホビー</option>
+                    <option value="gakki">楽器</option>
+                    <option value="sports">スポーツ&アウトドア</option>
+                    <option value="car">車&パイク</option>
+                    <option value="diy">DIY、工具、ガーデニング</option>
+                    <option value="kaden">大型家電</option>
+                    <option value=""kureka>クレジットカード</option>
+                    <option value="gift">ギフトカード</option>
+                    <option value="sangyo">産業·研究開発用品</option>
+                    <option value="outlet">Amazonアウトレット</option>
+                    <option value="haul">Amazon Haul</option>
+                    <option value="international">Amazonインターナショナルダイレクト</option>
+                </select>
+            </div>
 
-    <select class="category-search">
-    <option value="all">すべてのカテゴリー</option>
-    <option value="hurusato">Amazon ふるさと納税</option>
-    <option value="sale">プライム感謝セール</option>
-    <option value="audio">Audibleオーディオブック</option>
-    <option value="flesh">Amazon フレッシュ</option>
-    <option value="life">ライフ</option>
-    <option value="seijyo">成城石井</option>
-    <option value="device">Amazon デバイス</option>
-    <option value="kindle">Kindleストア</option>
-    <option value="video">Prime Video</option>
-    <option value="alexa">Alexaスキル</option>
-    <option value="teikibin">Amazon定期おトク便</option>
-    <option value="digitalmusic">デジタルミュージック</option>
-    <option value="appgame">アプリ&ゲーム</option>
-    <option value="book">本</option>
-    <option value="books">洋書</option>
-    <option value="music">音楽</option>
-    <option value="classic">クラシック</option>
-    <option value="dvd">DVD</option>
-    <option value="pc">コンピューター&テレビゲーム</option>
-    </select>
+            <input type="text" class="search-input" placeholder="Amazon.co.jpを検索">
+            <button type="submit" class="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
 
-
-    <!--:hover使用、言語変更-->
-    <div class="header-language">
-    <img src="国旗の画像を挿入する" alt="日本国旗">
-    <span class="nav-line-2">JP</span>
-    <i class="fa-solid fa-caret-down"></i>
-    </div>
-
-    <div class="language-popup">
-    <p class="popup-title">言語を変更する</p>
-    <ul class="language-popup-list">
-    <li>日本語 - JA</li>
-    <div class="language-popup-divider"></div>
-    <li>English - EN</li>
-    <li>中文 - ZH</li>
-    </ul>
-    <div class="language-popup-divider"></div>
-
-    <div class="language-popup-money">
-    <p class="popup-title">通貨を変更する</p>
-    <p>¥ -JPY- 日本円</p>
-    <a href="404.html">変更する</a>
-    <div class="language-popup-divider"></div>
-    </div>
-
-    <div class="language-popup-country">
-    <img src="日本の国旗画像挿入" alt="日本国旗">
-    <p>お客様は今Amazon.co.jpでお買い物中です</p>
-    <a href="404.html">国/地域を変更します</a>
-    </div>
-    </div>
-
-    <!--:hover使用する-->
-    <div class="header-login">
-    <span class="nav-line-1">こんにちは,ログイン</span>
-    <span class="nav-line-2">アカウント＆リスト</span>
-    </div>
-
-    <div class="login-popup">
-    <p class="popup-title">言語を変更する</p>
-
-
-
-
-    <div class="header-address">
-    <span class="nav-line-1">返品もこちら</span>
-    <span class="nav-line-2">注文履歴</span>
-    </div>
-
-    <div class="header-cart">
-    <i ・・・カートのロゴ探す></i>
-    <span class="nav-line-2">カート</span>
-</div>
-
-</div>
+    <!--:hover使用、④ 言語変更-->
+            <div class="header-language header-hover">
+                <img src="images/Flag_of_Japan.svg" class="nav-line-2" alt="日本国旗">
+                <span class="language-text">JP</span>
+                <i class="fa-solid fa-caret-down language-icon"></i>
+            </div>
 
 
+<!--
+            <div class="language-popup">
+                <p class="popup-title">言語を変更する</p>
+                <ul class="language-popup-list">
+                    <li>日本語 - JA</li>
+                    <div class="language-popup-divider"></div>
+                    <li>English - EN</li>
+                    <li>中文 - ZH</li>
+                </ul>
+                    <div class="language-popup-divider"></div>
+                <div class="language-popup-money">
+                    <p class="popup-title">通貨を変更する</p>
+                    <p>¥ -JPY- 日本円</p>
+                    <a href="404.html">変更する</a>
+                    <div class="language-popup-divider"></div>
+                </div>
+                <div class="language-popup-country">
+                    <img src="日本の国旗画像挿入" alt="日本国旗">
+                    <p>お客様は今Amazon.co.jpでお買い物中です</p>
+                    <a href="404.html">国/地域を変更します</a>
+                </div>
+            </div>
+-->
+
+
+    <!--:hover使用、⑤ ログイン-->
+            <div class="header-login header-hover">
+                <span class="nav-line-1">こんにちは,ログイン</span>
+
+                <span class="account-list">
+                <span class="nav-line-2">アカウント＆リスト</span>
+                <i class="fa-solid fa-caret-down login-icon"></i>
+                </span>
+            </div>
+
+    <!--⑥ 注文-->
+            <a href="404.html" class="header-order header-hover">
+                <span class="nav-line-1">返品もこちら</span>
+                <span class="nav-line-2">注文履歴</span>
+            </a>
+
+    <!--⑦ カート-->
+            <a href="404.html" class="header-cart header-hover">
+                <img src="images/sozai_cman_jp_20260705124136.svg"></span>
+                <span class="cart-text">カート</span>
+            </a>
+    </header>
+
+
+
+
+<!--  menu  -->
+    <menu>
+        <div class="menu-list">
+            <i class="fa-solid fa-bars"></i>
+            <span>すべて</span>
+        </div>
+
+        <a href="404.html" class="menu-text">
+            <span class="point menu-hover">Amazonポイント:残高を確認</span>
+            <span class="help menu-hover">ヘルプ</span>
+            <span class="hurusato menu-hover">ふるさと納税</span>
+            <span class="puchipura menu-hover">プチプラHaul</span>
+            <span class="life menu-hover">ライフ</span>
+            <span class="ranking menu-hover">ランキング</span>
+            <span class="besics menu-hover">Amazon Besics</span>
+            <span class="life menu-hover">Prime video</span>
+            <span class="ranking menu-hover">タイムセール</span>
+            <span class="besics menu-hover">新着商品</span>
+            <span class="life menu-hover">ミュージック</span>
+            <span class="menu-text-icon menu-hover">プライム
+            <i class="fa-solid fa-caret-down login-icon"></i>
+            </span>
+        </a>
+
+    </menu>
 
 
 

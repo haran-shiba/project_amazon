@@ -1,3 +1,267 @@
 body{
+    margin: 0;
+    padding: 0;
+}
+/* //////404.html////// */
+.error-page{
+    margin: 10px;
+}
 
+/* //////index.html////// */
+/* //////header////// */
+header{
+    height: 60px;
+    background-color: #131921;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    flex-shrink: 0;
+    gap: 20px;
+}
+
+.header-hover{
+    border:1px solid #131921;
+    padding: 3px 3px;
+    border-radius: 2px 2px;
+    color: #fff;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.header-hover:hover{
+    border:1px solid #fff;
+    padding: 3px 3px;
+    border-radius: 2px 2px;
+}
+
+
+/*① Amazonロゴ */
+
+.amazon-logo{
+    display:flex;
+    align-items:center ;
+    margin-left: 5px;
+    cursor:pointer;
+}
+
+.amazon-logo img{
+    width: 100px;
+}
+
+.amazon-logo p{
+    margin:0 0 8 2px;
+    font-size:12px;
+    color: #fff;
+}
+
+/*nav-line*/
+
+.nav-line-1 {
+    display: block;
+    font-size: 12px;
+}
+
+.nav-line-2 {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*② お届け先 */
+.header-address{
+    cursor:pointer;
+}
+
+.header-address-icon{
+    width: 15px;
+}
+
+.address-bottom{
+    display: flex;
+    align-items: center;
+    gap:4px;
+}
+
+/*③ 検索フォーム */
+.search-form{
+    display: flex;
+    flex: 1 1 auto;
+    height:40px;
+    min-width:300px;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.category-box{
+    position: relative;
+    width: 80px;
+    flex-shrink: 0;
+    background-color: #ccc;
+
+    display: flex;
+    align-items: center;
+
+    border-radius:4px 0 0 4px;
+}
+
+.category-label{
+    position: absolute;
+    left:12px;
+    color: black;
+    pointer-events: none;
+    font-size:12px;
+}
+
+.category-icon{
+    position: absolute;
+    right: 10px;
+    color: black;
+    pointer-events: none;
+}
+
+.search-input{
+    flex: 1 1 auto;
+    min-width: 0;
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.category-search{
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    cursor: pointer;
+}
+
+.search-button{
+    background-color:#febd69;
+    border:none;
+    padding: 5px 5px;
+    border-radius:0 4px 4px 0;
+    width: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.search-button i{
+    color:#131921;
+}
+
+/*hover使用、④ 言語変更*/
+.header-language{
+    display: flex;
+    align-items:center;
+    gap: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top:15px;
+}
+.header-language img{
+    width: 15px;
+}
+.language-text{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.language-icon{
+    color: #ccc;
+}
+
+
+/*:hover使用、⑤ ログイン*/
+.account-list{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap:5px;
+}
+
+.login-icon{
+    color: #ccc;
+}
+    
+/* ⑥ 注文 */
+.header-order{
+    cursor: pointer;
+}
+
+/* ⑦ カート */
+.header-cart{
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.header-cart img{
+    width: 40px;
+    filter: brightness(0) invert(1);   /* アイコン色０黒から１白にする*/
+}
+
+.cart-text{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* //////menu////// */
+menu{
+    background-color: #283649;
+    height: 40px;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:0;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+}
+
+.menu-list{
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+    align-items: center;
+    cursor: pointer;
+    gap:5px;
+    text-align: left;
+}
+
+.menu-text{
+    font-size:15px;
+    cursor: pointer;
+    text-decoration: none;
+    color:#fff;
+    display: flex;
+    gap: 10px;
+}
+ 
+.menu-hover{
+    border:1px solid #283649;
+    padding: 3px 3px;
+    border-radius: 2px 2px;
+}
+
+.menu-hover:hover{
+    border:1px solid #fff;
+    padding: 3px 3px;
+    border-radius: 2px 2px;
+
+}
+.menu-text-icon{
+    display:inline-flex;
+    text-align: center;
+    gap:5px;
 }
