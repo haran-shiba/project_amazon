@@ -221,6 +221,11 @@ header{
     margin: 0;
 }
 
+.language-item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 .language-popup-list li{
     margin-bottom: 12px;
 }

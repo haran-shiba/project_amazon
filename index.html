@@ -101,14 +101,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             <div class="language-popup">
                 <p class="popup-title">言語を変更する</p>
                 <ul class="language-popup-list">
-                    <li>日本語 - JA</li>
+                    <li class="language-item">
+                    <input type="radio" name="language" class="radio-btn" checked>
+                    <span>日本語 - JA</span>
+                </li>
+                
                 </ul>
 
                 <div class="language-popup-divider"></div>
 
                 <ul class="language-popup-list">
-                    <li>English - EN</li>
-                    <li>中文 - ZH</li>
+                    <li class="language-item">
+                    <input type="radio" name="language" class="radio-btn">
+                    <span>English - EN</span>
+
+                    <li class="language-item">
+                    <input type="radio" name="language" class="radio-btn">
+                    <span>中文 - ZH</span>
                 </ul>
 
                 <div class="language-popup-divider"></div>
@@ -125,7 +134,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                     <img src="images/Flag_of_Japan.svg" class="jp-icon">
                     <span>お客様は今Amazon.co.jpでお買い物中です</span>
                     </span>
-                    <a href="404.html" class="country-link">国/地域を変更します</a>
+                    <span class="country-link">
+                    <a href="404.html">国/地域を変更します</a>
+                    </span>
                 </div>
             </div>
         </div>
