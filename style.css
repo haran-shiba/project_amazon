@@ -246,6 +246,11 @@ menu{
     color:#fff;
     display: flex;
     gap: 10px;
+    flex:1;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width:500px;
+
 }
  
 .menu-hover{
@@ -269,6 +274,7 @@ menu{
 .menu-banner{
     margin-left:auto;
     height: 40px;
+    flex-shrink: o;
 }
 
 .menu-banner img{
