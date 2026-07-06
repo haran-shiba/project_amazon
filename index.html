@@ -28,7 +28,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         </a>
 
     <!--③ 検索フォーム-->
-        <form class="search-form" action="index.html">
+        <form class="search-form" action="404.html">
             <div class="category-box">
                 <span class="category-label">すべて</span>
                 <i class="fa-solid fa-caret-down category-icon"></i>
@@ -91,36 +91,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         </form>
 
     <!--:hover使用、④ 言語変更-->
+        <div class="language-wrap">
             <div class="header-language header-hover">
-                <img src="images/Flag_of_Japan.svg" class="nav-line-2" alt="日本国旗">
+                <img src="images/Flag_of_Japan.svg" class="nav-line-2 jp-icon" alt="日本国旗">
                 <span class="language-text">JP</span>
                 <i class="fa-solid fa-caret-down language-icon"></i>
             </div>
 
-
-<!--
             <div class="language-popup">
                 <p class="popup-title">言語を変更する</p>
                 <ul class="language-popup-list">
                     <li>日本語 - JA</li>
-                    <div class="language-popup-divider"></div>
+                </ul>
+
+                <div class="language-popup-divider"></div>
+
+                <ul class="language-popup-list">
                     <li>English - EN</li>
                     <li>中文 - ZH</li>
                 </ul>
-                    <div class="language-popup-divider"></div>
+
+                <div class="language-popup-divider"></div>
+
                 <div class="language-popup-money">
                     <p class="popup-title">通貨を変更する</p>
-                    <p>¥ -JPY- 日本円</p>
-                    <a href="404.html">変更する</a>
-                    <div class="language-popup-divider"></div>
+                    <span class="money">¥ -JPY- 日本円<a href="404.html">変更する</a></span>
                 </div>
+
+                <div class="language-popup-divider"></div>
+
                 <div class="language-popup-country">
-                    <img src="日本の国旗画像挿入" alt="日本国旗">
-                    <p>お客様は今Amazon.co.jpでお買い物中です</p>
-                    <a href="404.html">国/地域を変更します</a>
+                    <span class="icon-country">
+                    <img src="images/Flag_of_Japan.svg" class="jp-icon">
+                    <span>お客様は今Amazon.co.jpでお買い物中です</span>
+                    </span>
+                    <a href="404.html" class="country-link">国/地域を変更します</a>
                 </div>
             </div>
--->
+        </div>
 
 
     <!--:hover使用、⑤ ログイン-->
