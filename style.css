@@ -265,3 +265,24 @@ menu{
     text-align: center;
     gap:5px;
 }
+
+.menu-banner{
+    margin-left:auto;
+    height: 40px;
+}
+
+.menu-banner img{
+    height: 30px;
+    display: block;
+    cursor: pointer;
+    border:1px solid transparent;
+    padding: 3px 3px;
+    border-radius: 2px 2px;
+
+}
+
+.menu-banner img:hover{
+    border:1px solid #fff;
+    padding: 3px 3px;
+    border-radius: 2px 2px;
+}
