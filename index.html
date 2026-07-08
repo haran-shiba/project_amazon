@@ -19,7 +19,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         </a>
     
     <!-- ② お届け先 -->
-        <div class="address-wrap">
+    <div class="address-wrap">
 
         <div class="header-address header-hover">
             <span class="nav-line-1">お届け先: 川口 332-****</span>
@@ -30,31 +30,43 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         </div>
 
     <!-- ② お届け先ポップアップ　クリックしたら表示 -->
-
         <div class="address-popup">
+
             <div class="address-popup-header">
-                <p class="addres-title">場所を選択</p>
+                <p class="address-title">場所を選択</p>
                 <i class="fa-solid fa-xmark"></i>
             </div>
 
             <div class="address-popup-body">
-                <p>お届け先によって配送方法とお届け日が異なります</p>
-                <a href="404.html" class="address-login-btn">ログインしてアドレス帳を確認</a>
+                    <p >お届け先によって配送方法とお届け日が異なります</p>
+                    <a href="404.html" class="address-login-btn">ログインしてアドレス帳を確認</a>
+            
+                <div class="address-divider ">または郵便番号を入力</div>
+
+                <form class="post-form">
+                    <input type="text">
+                    <span>-</span>
+                    <input type="text">
+                    <button type="submit">保存</button>   
+                </form>
+
+                <div class="address-divider">または日本国外へ発送する</div>
+
+                <button class="country-select-btn">選択する
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+
+                <div class="country-list">
+                    <div class="country-item">アメリカ合衆国</div>
+                    <div class="country-item">オーストラリア</div>
+                    <div class="country-item">カナダ</div>
+                    <div class="country-item">シンガポール共和国</div>
+                    <div class="country-item">中華人民共和国</div>
+                    <div class="country-item">香港</div>
+                </div>                
             </div>
-        
-            <div class="address-divider">または郵便番号を入力</div>
-
-            <form class="post-form">
-                <input type="text">
-                <span>-</span>
-                <input type="text">
-                <button type="submit">保存</button>   
-            </form>
-
-            <div class="address-divider">または日本国外へ発送する</div>
-
-            <button class="country-select-btn">選択する</button>
         </div>
+    </div>
 
 
 

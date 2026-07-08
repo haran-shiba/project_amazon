@@ -72,19 +72,176 @@ header{
 }
 
 /*② お届け先 */
-.header-address{
-    cursor:pointer;
+
+.address-wrap:hover .address-popup{
+    display:block;
 }
 
-.header-address-icon{
-    width: 15px;
+.header-address{
+    cursor:pointer;
 }
 
 .address-bottom{
     display: flex;
     align-items: center;
-    gap:4px;
+    gap: 4px;
 }
+
+/* ポップアップ本体 */
+.address-popup{
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 350px;
+    background: #fff;
+    color: #333;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    z-index: 9999;
+}
+
+
+.address-popup-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #e7e5e5;
+    border-radius: 8px 8px 0 0;
+}
+
+.address-title{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.address-popup-body{
+    padding: 10px;
+}
+
+.address-popup-body p{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.address-login-btn{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 290px;
+    height: 30px;
+
+    margin: 0 auto 20px;
+
+    background: #ffd814;
+    color: #111;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+
+    border-radius: 30px;}
+
+.address-divider{
+    text-align: center;
+    color: #666;
+
+    margin: 20px 0;
+
+    position: relative;
+    font-size: 12px;
+}
+
+.address-divider::before,
+.address-divider::after{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+
+    width:25%;
+    height: 1px;
+
+    background: #ddd;
+}
+
+.address-divider::before{
+    left: 0;
+}
+
+.address-divider::after{
+    right: 0;
+}
+
+.post-form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.post-form input{
+    width: 80px;
+    height: 30px;
+
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+.post-form button,
+.country-select-btn{
+    background: #fff;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.post-form button{
+    width: 80px;
+    height: 30px;
+    border-radius: 80px;
+}
+
+.country-select-btn{
+    width: 290px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    border-radius: 8px;
+}
+
+.country-list{
+    display:none;
+    width:290px;
+    margin: 0 auto;
+    border: 1px solid #999;
+    background: #fff;
+}
+
+.country-item{
+    padding:10px 15px;
+    cursor:pointer;
+}
+
+.country-item:hover{
+    background:#f3f3f3;
+}
+
 
 /*③ 検索フォーム */
 .search-form{
