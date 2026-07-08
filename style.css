@@ -73,10 +73,6 @@ header{
 
 /*② お届け先 */
 
-.address-wrap:hover .address-popup{
-    display:block;
-}
-
 .header-address{
     cursor:pointer;
 }
@@ -212,9 +208,16 @@ header{
     border-radius: 80px;
 }
 
-.country-select-btn{
+.country-select-area{
+    position: relative;
     width: 290px;
+    margin: 0 auto;
+}
+
+.country-select-btn{
+    width: 100%;
     height: 30px;
+    margin: 0 auto;
 
     display: flex;
     align-items: center;
@@ -227,14 +230,21 @@ header{
 
 .country-list{
     display:none;
-    width:290px;
-    margin: 0 auto;
-    border: 1px solid #999;
-    background: #fff;
+    position:absolute;
+    top: -220px;
+    left:0;
+    width:100%;
+    max-height: 250px;
+    overflow-y: auto;
+    background:#fff;
+    border:1px solid #999;
+    border-radius: 8px;
+    z-index:1000;
+    font-size: 12px;
 }
 
 .country-item{
-    padding:10px 15px;
+    padding:5px 15px;
     cursor:pointer;
 }
 
@@ -242,6 +252,11 @@ header{
     background:#f3f3f3;
 }
 
+.country-divider{
+    height:1px;
+    background:#ddd;
+    margin:5px 0;
+}
 
 /*③ 検索フォーム */
 .search-form{
@@ -255,22 +270,31 @@ header{
 
 .category-box{
     position: relative;
-    width: 80px;
-    flex-shrink: 0;
-    background-color: #ccc;
+    min-width:80px;
+    max-width:250px;
+    width:80px;
+    flex-shrink:1;
+    background-color:#ccc;
 
-    display: flex;
-    align-items: center;
+    display:flex;
+    align-items:center;
 
     border-radius:4px 0 0 4px;
+    overflow:hidden;
 }
 
 .category-label{
-    position: absolute;
+    position:absolute;
     left:12px;
-    color: black;
-    pointer-events: none;
+    right:28px;
+
+    color:black;
+    pointer-events:none;
     font-size:12px;
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
 .category-icon{
@@ -309,6 +333,11 @@ header{
 
 .search-button i{
     color:#131921;
+}
+
+.search-form.active{
+    border:3px solid #ff9900;
+    border-radius:6px;
 }
 
 /*hover使用、④ 言語変更*/
@@ -350,7 +379,7 @@ header{
     display: none;
 
     position: absolute;
-    top: 55px;
+    top: 50px;
     right: 0;
 
     width: 280px;
@@ -362,10 +391,6 @@ header{
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 
     z-index: 9999;
-}
-
-.language-wrap:hover .language-popup{
-    display: block;
 }
 
 .popup-title{
@@ -422,6 +447,10 @@ header{
 }
 
 /*:hover使用、⑤ ログイン*/
+.login-wrap{
+    position: relative;
+}
+
 .header-login{
     cursor: pointer;
 }
@@ -435,7 +464,104 @@ header{
 .login-icon{
     color: #ccc;
 }
-    
+
+/* popup本体 */
+.account-popup{
+    display:none;
+
+    position:absolute;
+    top:50px;
+    right:-80px;
+
+    width:620px;
+    background:#fff;
+    color:#333;
+
+    border:1px solid #ccc;
+    border-radius:4px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.3);
+
+    padding:20px 28px;
+    z-index:9999;
+}
+
+
+
+.account-popup-login{
+    text-align:center;
+}
+
+.account-login-btn{
+    display:block;
+    width:200px;
+    margin:0 auto 10px;
+    padding:10px 0;
+
+    background:#ffd814;
+    border:1px solid #fcd200;
+    border-radius:8px;
+
+    color:#000;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.account-register-text{
+    margin:0;
+    font-size:12px;
+}
+
+.account-register-text a{
+    color:#007185;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.account-popup-divider{
+    height:1px;
+    background:#ddd;
+    margin:18px 0;
+}
+
+.account-popup-content{
+    display:flex;
+    font-size: 12px;
+}
+
+.account-popup-left{
+    width:50%;
+    padding-right:25px;
+}
+
+.account-popup-right{
+    width:50%;
+    padding-left:25px;
+    border-left:1px solid #ddd;
+}
+
+.account-popup h3{
+    margin:0 0 12px;
+    font-weight:bold;
+    cursor:default;
+}
+
+/* リンク */
+.account-popup-left a,
+.account-popup-right a{
+    display:block;
+    margin-bottom:3px;
+
+    color:#333;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.account-popup-left a:hover,
+.account-popup-right a:hover{
+    color:#c45500;
+    text-decoration:underline;
+}    
 /* ⑥ 注文 */
 .header-order{
     cursor: pointer;
@@ -456,7 +582,7 @@ header{
 }
 
 .cart-text{
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     color: #fff;
 }
@@ -538,4 +664,24 @@ menu{
     border:1px solid #fff;
     padding: 3px 3px;
     border-radius: 2px 2px;
+}
+
+/* 暗い背景 */
+.overlay{
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: 9998;
+}
+.language-popup,
+.account-popup{
+    z-index:9999;
 }

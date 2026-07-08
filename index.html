@@ -21,20 +21,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <!-- ② お届け先 -->
     <div class="address-wrap">
 
-        <div class="header-address header-hover">
-            <span class="nav-line-1">お届け先: 川口 332-****</span>
+        <div id="addressButton" class="header-address header-hover">
+            <span id="addressTopText" class="nav-line-1">お届け先: 川口 332-****</span>
             <div class="address-bottom">
                 <i class="fa-solid fa-location-dot"></i>
-                <span class="nav-line-2">場所を更新する</span>
+                <span id="addressMainText" class="nav-line-2">場所を更新する</span>
             </div>
         </div>
 
     <!-- ② お届け先ポップアップ　クリックしたら表示 -->
-        <div class="address-popup">
+        <div id="addressPopup" class="address-popup">
 
             <div class="address-popup-header">
                 <p class="address-title">場所を選択</p>
-                <i class="fa-solid fa-xmark"></i>
+                <i id="closePopup" class="fa-solid fa-xmark"></i>
             </div>
 
             <div class="address-popup-body">
@@ -52,18 +52,28 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
                 <div class="address-divider">または日本国外へ発送する</div>
 
-                <button class="country-select-btn">選択する
-                    <i class="fa-solid fa-angle-down"></i>
-                </button>
+                <div class="country-select-area">
+                    <button  id="countryButton" class="country-select-btn">選択する
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
 
-                <div class="country-list">
-                    <div class="country-item">アメリカ合衆国</div>
-                    <div class="country-item">オーストラリア</div>
-                    <div class="country-item">カナダ</div>
-                    <div class="country-item">シンガポール共和国</div>
-                    <div class="country-item">中華人民共和国</div>
-                    <div class="country-item">香港</div>
-                </div>                
+                    <div  id="countryList" class="country-list">
+                        <div class="country-item">アメリカ合衆国</div>
+                        <div class="country-item">オーストラリア</div>
+                        <div class="country-item">カナダ</div>
+                        <div class="country-item">シンガポール共和国</div>
+                        <div class="country-item">中華人民共和国</div>
+                        <div class="country-item">香港</div>
+                        <div class="country-divider"></div>
+                        <div class="country-item">アイスランド共和国</div>
+                        <div class="country-item">アイルランド共和国</div>
+                        <div class="country-item">アゼルバイジャン共和国</div>
+                        <div class="country-item">アメリカ合衆国</div>
+                        <div class="country-item">アメリカ領ヴァージン諸島</div>
+                        <div class="country-item">アメリカ領サモア</div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -71,12 +81,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 
     <!--③ 検索フォーム-->
-        <form class="search-form" action="404.html">
-            <div class="category-box">
-                <span class="category-label">すべて</span>
+        <form id="searchForm" class="search-form" action="404.html">
+            <div id="categoryBox" class="category-box">
+                    <span id="categoryLabel" class="category-label">すべて</span>
                 <i class="fa-solid fa-caret-down category-icon"></i>
 
-                <select class="category-search">
+                <select id="categorySearch" class="category-search">
                     <option value="hurusato">すべてのカテゴリー</option>
                     <option value="hurusato">Amazon ふるさと納税</option>
                     <option value="sale">プライム感謝セール</option>
@@ -99,7 +109,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                     <option value="pc">コンピューター&テレビゲーム</option>
                     <option value="PCsoft">PCソフト</option>
                     <option value="PC1">パソコン·周辺機器</option>
-                    <option value=""erekuto>エレクトロニクス&カメラ</option>
+                    <option value="erekuto">エレクトロニクス&カメラ</option>
                     <option value="bungu">文房具·オフィス用品</option>
                     <option value="kitchen">キッチン&家庭用品</option>
                     <option value="pet">ペット用品</option>
@@ -118,7 +128,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                     <option value="car">車&パイク</option>
                     <option value="diy">DIY、工具、ガーデニング</option>
                     <option value="kaden">大型家電</option>
-                    <option value=""kureka>クレジットカード</option>
+                    <option value="kureka">クレジットカード</option>
                     <option value="gift">ギフトカード</option>
                     <option value="sangyo">産業·研究開発用品</option>
                     <option value="outlet">Amazonアウトレット</option>
@@ -186,6 +196,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 
     <!--:hover使用、⑤ ログイン-->
+    <div class="login-wrap">
             <div class="header-login header-hover">
                 <span class="nav-line-1">こんにちは,ログイン</span>
 
@@ -194,6 +205,52 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 <i class="fa-solid fa-caret-down login-icon"></i>
                 </span>
             </div>
+
+            <div class="account-popup">
+
+                <div class="account-popup-login">
+                    <a href="404.html" class="account-login-btn">ログイン</a>
+
+                    <p class="account-register-text">
+                        初めてご利用ですか？
+                        <a href="404.html">新規登録はこちら</a>
+                    </p>
+                </div>
+
+                <div class="account-popup-divider"></div>
+
+                <div class="account-popup-content">
+                    <div class="account-popup-left">
+                        <h3>リスト</h3>
+                        <a href="404.html">新しいリストを作成する</a>
+                        <a href="404.html">ギフトアイデア</a>
+                        <a href="404.html">らくらくベビー</a>
+                        <a href="404.html">ショールーム</a>
+                        <a href="404.html">「みんなで応援」プログラム</a>
+                    </div>
+
+                    <div class="account-popup-right">
+                        <h3>アカウントサービス</h3>
+                        <a href="404.html">アカウントサービス</a>
+                        <a href="404.html">注文履歴</a>
+                        <a href="404.html">ほしい物リスト</a>
+                        <a href="404.html">おすすめ商品</a>
+                        <a href="404.html">メンバーシップおよび購読</a>
+                        <a href="404.html">Amazonビジネス（法人購買・請求書払い・法人割引）</a>
+                        <a href="404.html">コンテンツと端末の管理</a>
+                        <a href="404.html">ミュージックライブラリにアクセス</a>
+                        <a href="404.html">Amazon Photos</a>
+                        <a href="404.html">ウォッチリスト</a>
+                        <a href="404.html">お客様の Kindle Unlimited</a>
+                        <a href="404.html">マンガ本棚</a>
+                        <a href="404.html">ゲーム&PCソフトダウンロードライブラリ</a>
+                        <a href="404.html">アプリライブラリとデバイスの管理</a>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
 
     <!--⑥ 注文-->
             <a href="404.html" class="header-order header-hover">
@@ -208,7 +265,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             </a>
     </header>
 
-
+<!--  暗い背景  -->
+    <div id="overlay" class="overlay"></div>
 
 
 <!--  menu  -->
@@ -246,6 +304,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 
 
-
+<script src="js/main.js"></script>
 </body>
 </html>
