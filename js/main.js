@@ -8,18 +8,21 @@ const overlay = document.getElementById("overlay");
 addressButton.addEventListener("click", function(){
     addressPopup.style.display = "block";
     overlay.style.display = "block";
+    countryList.style.display = "none";
 });
 
 // ×で閉じる
 closePopup.addEventListener("click", function(){
     addressPopup.style.display = "none";
     overlay.style.display = "none";
+    countryList.style.display = "none";
 });
 
 // 黒い背景をクリックして閉じる
 overlay.addEventListener("click", function(){
     addressPopup.style.display = "none";
     overlay.style.display = "none";
+    countryList.style.display = "none";
 });
 
 // 選択するリストの国表示
