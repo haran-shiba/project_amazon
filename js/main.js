@@ -93,3 +93,19 @@ loginWrap.addEventListener("mouseenter", function(){
 loginWrap.addEventListener("mouseleave", function(){
     hidePopup(accountPopup);
 });
+
+const menuButton = document.getElementById("menuButton");
+const sideMenu = document.getElementById("sideMenu");
+const sideMenuClose = document.getElementById("sideMenuClose");
+
+menuButton.addEventListener("click", function(){
+    sideMenu.classList.add("active");
+    sideMenuClose.classList.add("active");
+    overlay.style.display = "block";
+});
+
+sideMenuClose.addEventListener("click", function(){
+    sideMenu.classList.remove("active");
+    sideMenuClose.classList.remove("active");
+    overlay.style.display = "none";
+});

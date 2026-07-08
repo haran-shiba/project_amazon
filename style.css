@@ -666,6 +666,97 @@ menu{
     border-radius: 2px 2px;
 }
 
+.side-menu{
+    position:fixed;
+    top:0;
+    left:-360px;
+
+    width:360px;
+    height:100vh;
+
+    background:#fff;
+    color:#111;
+
+    z-index:10000;
+
+    transition:0.3s;
+    overflow-y:auto;
+}
+
+.side-menu.active{
+    left:0;
+}
+
+.side-menu-header{
+    height:60px;
+    background:#232f3e;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:0 25px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.side-menu-header i{
+    font-size:30px;
+}
+
+.side-menu-body{
+    padding:20px 25px;
+}
+
+.side-menu-body h3{
+    font-size:22px;
+    margin:5px 0;
+}
+
+.side-menu-body a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:10px 0;
+
+    color:#111;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.side-menu-body a:hover{
+    background:#f3f3f3;
+}
+
+.side-divider{
+    height:1px;
+    background:#ddd;
+    margin:20px -25px;
+}
+
+.side-menu-close{
+    display:none;
+
+    position:fixed;
+    top:15px;
+    left:380px;
+
+    background:none;
+    border:none;
+    color:#fff;
+
+    font-size:35px;
+    cursor:pointer;
+
+    z-index:10001;
+}
+
+.side-menu-close.active{
+    display:block;
+}
+
 /* 暗い背景 */
 .overlay{
     display: none;
