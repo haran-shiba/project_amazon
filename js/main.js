@@ -1,4 +1,3 @@
-console.log("JavaScript connected");
 const addressButton = document.getElementById("addressButton");
 const addressPopup = document.getElementById("addressPopup");
 const closePopup = document.getElementById("closePopup");
