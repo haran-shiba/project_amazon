@@ -68,14 +68,15 @@ const languagePopup = document.querySelector(".language-popup");
 const loginWrap = document.querySelector(".login-wrap");
 const accountPopup = document.querySelector(".account-popup");
 
+// JP・アカウントのホバーポップアップは全画面overlayを使わない
+// (overlayを表示すると、トリガー要素自体がoverlayの下に隠れてmouseleaveが発火し、
+//  表示→非表示を繰り返すちらつきが起きるため)
 function showPopup(popup){
     popup.style.display = "block";
-    overlay.style.display = "block";
 }
 
 function hidePopup(popup){
     popup.style.display = "none";
-    overlay.style.display = "none";
 }
 
 // JP
